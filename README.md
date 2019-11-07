@@ -19,13 +19,6 @@ if not os.path.exists('maintainer.txt'):
         f.write('First time')
 
 def push_commits():
-    def cmd(command):
-        process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE)
-        output = process.stdout.readline()
-        print(str(output.strip())[2:-1])
-        rc = process.poll()
-        return rc
-
     if not os.path.exists('GCH'):
         os.system("git clone https://github.com/imneonizer/GCH.git")
         os.chdir('GCH')
