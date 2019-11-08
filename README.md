@@ -35,7 +35,7 @@ def push_commits():
         os.system(('git add .'))
         os.system(f"git commit -m 'Update'")
 
-    ttc = random.randint(1, 50)
+    ttc = int(input('Enter Number of commits: ')) #random.randint(1, 50)
     for i in range(ttc):
         repeat_commits()
 
